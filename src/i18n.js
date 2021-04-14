@@ -10,6 +10,9 @@ import translationENG from './locales/en/translation.json';
 
 // the translations
 const resources = {
+  en: {
+    translation: translationENG
+  },
   gr: {
     translation: translationGr
   },
@@ -22,9 +25,9 @@ const resources = {
    sp: {
     translation: translationSP
   },
-   eng: {
-    translation: translationENG
-  }
+  //  eng: {
+  //   translation: translationENG
+  // }
 };
 
 i18n

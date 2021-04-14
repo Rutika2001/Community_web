@@ -8,7 +8,7 @@ import {
 
 //i18n
 import i18n from '../../../i18n';
-// import { withNamespaces } from 'react-i18next';
+ import { withTranslation } from 'react-i18next';
 
 // falgs
 import usFlag from "../../../assets/images/flags/us.jpg";
@@ -101,4 +101,4 @@ class LanguageDropdown extends Component {
   }
 }
 
-export default (LanguageDropdown);
+export default withTranslation()(LanguageDropdown);

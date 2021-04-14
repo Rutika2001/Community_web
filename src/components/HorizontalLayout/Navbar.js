@@ -4,7 +4,7 @@ import { Link, withRouter } from "react-router-dom";
 import classname from "classnames";
 
 //i18n
-//import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 class Navbar extends Component {
     constructor(props) {
@@ -386,5 +386,5 @@ class Navbar extends Component {
         );
     }
 }
+export default withRouter(withTranslation()(Navbar));
 
-export default withRouter((Navbar));

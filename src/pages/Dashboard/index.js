@@ -20,7 +20,7 @@ import LatestTranaction from "./LatestTranaction";
 import Breadcrumbs from '../../components/Common/Breadcrumb';
 
 //i18n
-//import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 class Dashboard extends Component {
     constructor(props) {
@@ -209,4 +209,4 @@ class Dashboard extends Component {
     }
 }
 
-export default (Dashboard);
+export default withTranslation()(Dashboard);

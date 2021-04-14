@@ -29,7 +29,7 @@ import slack from "../../assets/images/brands/slack.png";
 
 //i18n
 //import { withNamespaces } from 'react-i18next';
-
+import { withTranslation } from 'react-i18next';
 // Redux Store
 import { toggleRightSidebar } from "../../store/actions";
 
@@ -356,4 +356,4 @@ const mapStatetoProps = state => {
   return { layoutType };
 };
 
-export default connect(mapStatetoProps, { toggleRightSidebar })((Header));
+export default connect(mapStatetoProps, { toggleRightSidebar })(withTranslation()(Header));

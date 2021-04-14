@@ -13,7 +13,7 @@ import NonAuthLayout from "./components/NonAuthLayout";
 
 // Import scss
 import "./assets/scss/theme.scss";
-
+import { withTranslation } from 'react-i18next';
 // Import Firebase Configuration file
 // import { initFirebaseBackend } from "./helpers/firebase_helper";
 
@@ -37,6 +37,7 @@ fakeBackend();
 
 // init firebase backend
 // initFirebaseBackend(firebaseConfig);
+
 
 class App extends Component {
 	constructor(props) {
@@ -100,5 +101,5 @@ const mapStateToProps = state => {
 		layout: state.Layout
 	};
 };
-
 export default connect(mapStateToProps, null)(App);
+

@@ -4,7 +4,7 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap
 import { withRouter, Link } from 'react-router-dom';
 
 //i18n
-// import { withNamespaces } from 'react-i18next';
+ import { withTranslation } from 'react-i18next';
 
 // users
 import user1 from '../../../assets/images/users/avatar-1.jpg';
@@ -65,4 +65,4 @@ class ProfileMenu extends Component {
     }
 }
 
-export default withRouter((ProfileMenu));
+export default withRouter(withTranslation()(ProfileMenu));

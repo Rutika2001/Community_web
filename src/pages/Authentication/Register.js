@@ -52,8 +52,8 @@ class Register extends Component {
                     <Row>
                       <Col className="col-7">
                         <div className="text-primary p-4">
-                          <h5 className="text-primary">Free Register</h5>
-                          <p>Get your free Skote account now.</p>
+                          <h5 className="text-primary">Register Yourself!</h5>
+                          <p>Get your TRF account</p>
                         </div>
                       </Col>
                       <Col className="col-5 align-self-end">
@@ -92,7 +92,32 @@ class Register extends Component {
                               {this.props.registrationError}
                             </Alert>
                           ) : null}
+                        <div className="form-group">
+                          <AvField
+                            name="fname"
+                            label="First Name"
+                            className="form-control"
+                            placeholder="Enter First Name"
+                            type="text"
+                            validate={{
+                              required: {value: true, errorMessage: "This field cannot be empty !"},
+                              pattern: {value: '/^[a-zA-Z]+$/', errorMessage: 'Enter only Alphabets'},
+                              
+                          }}/>
 
+                        <div className="form-group">
+                          <AvField
+                            name="lname"
+                            label="Last Name"
+                            className="form-control"
+                            placeholder="Enter Last Name"
+                            type="text"
+                            validate={{
+                              required : {value : true , errorMessage : "This field cannot be empty !"},
+                              pattern : {value: '/^[a-zA-Z]+$/',errorMessage: 'Enter Only Alphabets'},
+
+                            }}/>
+                        </div>
                         <div className="form-group">
                           <AvField
                             name="email"
@@ -100,26 +125,25 @@ class Register extends Component {
                             className="form-control"
                             placeholder="Enter email"
                             type="email"
-                            required
+                            validate={{
+                              required : {value : true , errorMessage : "This field cannot be empty !"},
+                              pattern : {value : '^[a-zA-Z0-9.%]+@vit+\.edu$' ,errorMessage :'Enter your vit.edu email only!'}
+                            }}
                           />
                         </div>
 
-                        <div className="form-group">
-                          <AvField
-                            name="username"
-                            label="Username"
-                            type="text"
-                            required
-                            placeholder="Enter username"
-                          />
                         </div>
                         <div className="form-group">
                           <AvField
                             name="password"
                             label="Password"
                             type="password"
-                            required
                             placeholder="Enter Password"
+                            validate={{
+                              required : {value : true , errorMessage : "This field cannot be empty !"},
+                              pattern : {value : '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])' , errorMessage:'UpperCase , lowerCase and number is required'},
+                              minLength: {value : 8 , errorMessage : 'Atleast 8 character required!'}
+                            }}
                           />
                         </div>
 
@@ -156,8 +180,7 @@ class Register extends Component {
                     </Link>{" "}
                   </p>
                   <p>
-                    © {new Date().getFullYear()} Skote. Crafted with{" "}
-                    <i className="mdi mdi-heart text-danger"></i> by Themesbrand
+                  <p>© {new Date().getFullYear()} TRF. Crafted with <i className="mdi mdi-heart text-danger"></i> by Forum</p>
                   </p>
                 </div>
               </Col>

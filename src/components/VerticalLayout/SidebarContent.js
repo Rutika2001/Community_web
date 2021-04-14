@@ -6,7 +6,7 @@ import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 //i18n
-// import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 class SidebarContent extends Component {
 
@@ -355,4 +355,4 @@ class SidebarContent extends Component {
     }
 }
 
-export default withRouter((SidebarContent));
+export default withRouter(withTranslation()(SidebarContent));

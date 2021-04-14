@@ -8,7 +8,7 @@ import avatar3 from "../../../assets/images/users/avatar-3.jpg";
 import avatar4 from "../../../assets/images/users/avatar-4.jpg";
 
 //i18n
-// import { withNamespaces } from 'react-i18next';
+ import { withTranslation } from 'react-i18next';
 
 class NotificationDropdown extends Component {
   constructor(props) {
@@ -128,4 +128,4 @@ class NotificationDropdown extends Component {
     );
   }
 }
-export default (NotificationDropdown);
+export default withTranslation()(NotificationDropdown);

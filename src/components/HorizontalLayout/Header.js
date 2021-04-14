@@ -30,9 +30,11 @@ import slack from "../../assets/images/brands/slack.png";
 import { toggleRightSidebar } from "../../store/actions";
 
 //i18n
-// import { withNamespaces } from 'react-i18next';
 
-class Header extends Component {
+//import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
+
+class Header extends Component{
   constructor(props) {
     super(props);
     this.state = { isSearch: false };
@@ -387,4 +389,4 @@ const mapStatetoProps = state => {
   return { layoutType };
 };
 
-export default connect(mapStatetoProps, { toggleRightSidebar })((Header));
+export default connect(mapStatetoProps, { toggleRightSidebar })(withTranslation()(Header));
